@@ -2,7 +2,8 @@ import React from 'react'
 import { ArrowDownIcon, Globe2Icon, GlobeIcon, LandmarkIcon, PlaneIcon, SendIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
-import { HeroVideoDialog } from '@/components/hero-video-dialog'
+import { HeroVideoDialog } from '@/components/ui/hero-video-dialog'
+import { PopularDestinations } from '@/components/shared/PopularDestinations'
 
 const suggestions = [
     {
@@ -69,6 +70,8 @@ const Explore = () => {
                         thumbnailAlt="Hero Video"
                     />
                 </div>
+
+                <PopularDestinations />
             </div>
         </div>
     )
