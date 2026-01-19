@@ -11,8 +11,8 @@ const menuOptions = [
 
 const Header = () => {
     return (
-        <div className="flex justify-between items-center">
-            <div className="flex gap-2 items-center">
+        <div className="flex justify-between items-center p-4">
+            <div className="flex gap-2 items-center"> 
                 <Image src={"/logo.svg"} alt="Logo" width={30} height={30} />
                 <h2 className="font-bold text2-xl">triPlanner</h2>
             </div>
@@ -23,7 +23,7 @@ const Header = () => {
                         href={option.href}
                         className="text-sm font-medium text-gray-700 hover:text-gray-900"
                     >
-                        <h2 className="text-lg hover:scale-10 transition">
+                        <h2 className="text-lg hover:scale-100 transition hover:text-primary">
                             {option.name}
                         </h2>
                     </Link>
