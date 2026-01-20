@@ -2,6 +2,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Outfit, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/shared/Header";
 
 const geistSans = Outfit({
     variable: "--font-geist-sans",
@@ -29,7 +30,10 @@ export default function RootLayout({
                 <body
                     className={`${geistSans.variable} ${geistMono.variable} antialiased`}
                 >
-                    {children}
+                    <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 pb-12 pt-6 sm:px-6">
+                        <Header />
+                        {children}
+                    </div>
                 </body>
             </html>
         </ClerkProvider>
