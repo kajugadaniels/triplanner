@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Outfit, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/shared/Header";
+import { ConvexClientProvider } from "./providers/ConvexClientProvider";
 
 const geistSans = Outfit({
     variable: "--font-geist-sans",
@@ -32,7 +33,9 @@ export default function RootLayout({
                 >
                     <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 pb-12 pt-6 sm:px-6">
                         <Header />
-                        {children}
+                        <ConvexClientProvider>
+                            {children}
+                        </ConvexClientProvider>
                     </div>
                 </body>
             </html>
