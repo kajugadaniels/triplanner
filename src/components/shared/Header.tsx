@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Button } from '../ui/button'
+import { SignInButton } from '@clerk/nextjs'
 
 const menuOptions = [
     { name: 'Home', href: '/' },
@@ -10,6 +11,7 @@ const menuOptions = [
 ]
 
 const Header = () => {
+
     return (
         <div className="flex justify-between items-center py-4">
             <div className="flex gap-2 items-center"> 
@@ -29,7 +31,9 @@ const Header = () => {
                     </Link>
                 ))}
             </div>
-            <Button>Get Started</Button>
+            <SignInButton mode="modal">
+                <Button className='cursor-pointer'>Get Started</Button>
+            </SignInButton>
         </div>
     )
 }
